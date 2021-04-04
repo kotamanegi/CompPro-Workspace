@@ -75,7 +75,7 @@
         {
             "label": "download",
             "type": "shell",
-            "command": "oj-prepare ${input:ContestURL} --config-file ${workspaceFolder}/.config/prepare.config.toml",
+            "command": "python oj-download.py ${input:ContestURL}",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"

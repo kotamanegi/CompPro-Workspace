@@ -1,2 +1,0 @@
-contest_directory = "./Contests/{service_name}_{contest_id}"
-problem_directory = "{problem_id}"
