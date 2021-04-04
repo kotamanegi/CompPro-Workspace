@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "utility": "cpp",
+        "xutility": "cpp",
+        "vector": "cpp",
+        "tuple": "cpp",
+        "stack": "cpp",
+        "deque": "cpp",
+        "string": "cpp"
+    },
+    "cmake.configureOnOpen": false
+}

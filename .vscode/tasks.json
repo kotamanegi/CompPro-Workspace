@@ -1,0 +1,92 @@
+{
+    "version": "2.0.0",
+    "command": "/bin/bash",
+    "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+    },
+    "tasks": [
+        {
+            "label": "Submission",
+            "type": "shell",
+            "command": "oj s ${fileBasenameNoExtension}_expanded.cpp",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": [
+                "Test",
+                "Expand #includes"
+            ]
+        },
+        {
+            "label": "Expand #includes",
+            "type": "shell",
+            "command": "oj-bundle ${file} -I library > ${fileDirname}/${fileBasenameNoExtension}_expanded.cpp",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Test",
+            "type": "shell",
+            "command": "oj t -c ./${fileBasenameNoExtension}",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": [
+                "C/C++: g++ build"
+            ]
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I",
+                "${workspaceFolder}",
+                "-I",
+                "${workspaceFolder}/library"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "コンパイラ: /usr/bin/g++"
+        },
+        {
+            "label": "download",
+            "type": "shell",
+            "command": "oj-prepare ${input:ContestURL} --config-file ${workspaceFolder}/config/prepare.config.toml",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "ContestURL",
+            "description": "input contest url",
+            "type": "promptString"
+        }
+    ]
+}
