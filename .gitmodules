@@ -1,0 +1,3 @@
+[submodule "library/ei1333"]
+	path = library/ei1333
+	url = https://github.com/ei1333/library.git
