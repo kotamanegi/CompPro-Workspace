@@ -75,7 +75,7 @@
         {
             "label": "download",
             "type": "shell",
-            "command": "oj-prepare ${input:ContestURL} --config-file ${workspaceFolder}/config/prepare.config.toml",
+            "command": "oj-prepare ${input:ContestURL} --config-file ${workspaceFolder}/.config/prepare.config.toml",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
