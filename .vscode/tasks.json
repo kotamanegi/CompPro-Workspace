@@ -19,6 +19,10 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            },
             "dependsOn": [
                 "Test",
                 "Expand #includes"
@@ -31,6 +35,10 @@
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "silent",
+                "clear": true
             }
         },
         {
@@ -44,6 +52,10 @@
             },
             "options": {
                 "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "clear": true
             },
             "dependsOn": [
                 "C/C++: g++ build"
@@ -70,7 +82,11 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "コンパイラ: /usr/bin/g++"
+            "detail": "コンパイラ: /usr/bin/g++",
+            "presentation": {
+                "reveal": "silent",
+                "clear": true
+            }
         },
         {
             "label": "download",
@@ -79,6 +95,10 @@
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "clear": true
             }
         }
     ],
