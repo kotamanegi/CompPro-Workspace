@@ -7,7 +7,6 @@
         "austin.code-gnu-global",
         "jeff-hykin.better-cpp-syntax",
         "ms-python.python",
-        "xaver.clang-format",
-        "ms-vscode.cpptools-extension-pack"
+        "xaver.clang-format"
     ]
 }
