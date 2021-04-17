@@ -69,14 +69,14 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
+                "${fileBasenameNoExtension}",
                 "-I",
                 "${workspaceFolder}",
                 "-I",
                 "${workspaceFolder}/library"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
