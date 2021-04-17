@@ -64,7 +64,7 @@
         {
             "label": "Test - Python",
             "type": "shell",
-            "command": "oj t -c 'python3 ${file}'",
+            "command": "oj t -c 'python3 ${file}' -e 1e-6",
             "problemMatcher": [],
             "group": {
                 "kind": "test",
@@ -81,7 +81,7 @@
         {
             "label": "Test",
             "type": "shell",
-            "command": "oj t -c ./${fileBasenameNoExtension}",
+            "command": "oj t -c ./${fileBasenameNoExtension} -e 1e-6",
             "problemMatcher": [],
             "group": {
                 "kind": "test",
