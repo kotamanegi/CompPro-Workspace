@@ -29,6 +29,26 @@
             ]
         },
         {
+            "label": "Submission - Python",
+            "type": "shell",
+            "command": "oj s ${file}",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            },
+            "dependsOn": [
+                "Test - Python"
+            ]
+        },
+        {
             "label": "Expand #includes",
             "type": "shell",
             "command": "oj-bundle ${file} -I library > ${fileDirname}/${fileBasenameNoExtension}_expanded.cpp",
@@ -38,6 +58,23 @@
             },
             "presentation": {
                 "reveal": "silent",
+                "clear": true
+            }
+        },
+        {
+            "label": "Test - Python",
+            "type": "shell",
+            "command": "oj t -c 'python3 ${file}'",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always",
                 "clear": true
             }
         },
