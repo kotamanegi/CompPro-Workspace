@@ -128,7 +128,7 @@
         {
             "label": "download",
             "type": "shell",
-            "command": "python oj-download.py ${input:ContestURL}",
+            "command": "python3 oj-download.py ${input:ContestURL}",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
